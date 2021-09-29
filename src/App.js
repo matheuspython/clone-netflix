@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import Tmdb from './Tmdb'
-
+import Tmdb from './services/api'
+import MovieRow from './components/MovieRow/index.jsx'
 
 export const App = () => {
   const [movieList, setMovieList] = useState([])
@@ -19,9 +19,7 @@ export const App = () => {
     <div className="page">
       <section className="lists">
         {movieList.map((item, key)=>(
-          <div>
-            {item.title}
-          </div>
+         <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
     </div>
