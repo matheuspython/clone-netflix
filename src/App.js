@@ -3,9 +3,10 @@ import Tmdb from './services/api'
 
 import GlobalStyle from './styles/global'
 
-import MovieRow from './components/MovieRow/index.jsx'
-import FeatureMovie from './components/FeatureMovie/index'
 import Header from './components/Header'
+import FeatureMovie from './components/FeatureMovie/index'
+import MovieRow from './components/MovieRow/index.jsx'
+import Footer from './components/Footer'
 
 export const App = () => {
   const [movieList, setMovieList] = useState([])
@@ -58,6 +59,8 @@ export const App = () => {
           <MovieRow key={key} title={item.title} items={item.items} />
           ))}
         </section>
+
+        <Footer />
       </div>
     </>
   )
