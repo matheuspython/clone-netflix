@@ -11,7 +11,11 @@ export const HeaderStyled = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 2%;
-
+  background: transparent;
+  transition: all ease .4s;
+  &.black{
+    background-color: #141414;
+  }
   .img-controler{
     height: 30px;
     img{
