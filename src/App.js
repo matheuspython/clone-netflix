@@ -5,6 +5,8 @@ import GlobalStyle from './styles/global'
 
 import MovieRow from './components/MovieRow/index.jsx'
 import FeatureMovie from './components/FeatureMovie/index'
+import Header from './components/Header'
+
 export const App = () => {
   const [movieList, setMovieList] = useState([])
   const [featureData, setFeatureData] = useState(null)
@@ -28,9 +30,12 @@ export const App = () => {
     <>
     <GlobalStyle />
       <div className="page">
+        <Header />
+
         {featureData &&
           <FeatureMovie item={featureData} />
         }
+
         <section className="lists">
           {movieList.map((item, key)=>(
           <MovieRow key={key} title={item.title} items={item.items} />

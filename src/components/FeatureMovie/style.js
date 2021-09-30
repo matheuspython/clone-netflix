@@ -16,8 +16,7 @@ export const FeatureMovieStyled = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: 30px;
-      padding-bottom: 150px;
+      padding: 70px 0 150px 30px;
       .featured--name{
         font-size: 60px;
         font-weight: bold;
