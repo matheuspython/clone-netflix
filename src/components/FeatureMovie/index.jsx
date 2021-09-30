@@ -12,8 +12,6 @@ export default function FeatureMovie({item}) {
   return (
     <FeatureMovieStyled
     style={{
-      backgroundSize:'cover',
-      backgroundPosition:'center',
       backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
     }}
     >

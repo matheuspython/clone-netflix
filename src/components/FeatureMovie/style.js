@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import media from 'styled-media-query'
 
 export const FeatureMovieStyled = styled.section`
   height: 100vh;
+  background-size:cover;
+  background-position:center;
   .featured--vertical{
     width: inherit;
     height: inherit;
@@ -35,6 +38,9 @@ export const FeatureMovieStyled = styled.section`
         font-size: 20px;
         color: #999;
         max-width: 40%;
+        ${media.lessThan("medium")`
+          max-width: 100%;
+        `}
       }
       .feature--buttons{
         margin-top: 15px;
