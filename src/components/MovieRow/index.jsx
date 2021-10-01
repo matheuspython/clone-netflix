@@ -1,4 +1,8 @@
 import React from 'react'
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore'
+import NavigateNextIcon from '@material-ui/icons/NavigateNext'
+
+
 
 import {MovieRowStyled} from './style'
 
@@ -6,6 +10,15 @@ export default function MovieRow({title, items}) {
   return (
     <MovieRowStyled>
       <h2>{title}</h2>
+      <div className="movieRow-left movieRow">
+        <NavigateBeforeIcon style={{fontSize: 50}} />
+      </div>
+
+      <div className="movieRow-right movieRow">
+        <NavigateNextIcon style={{fontSize: 50}} />
+      </div>
+
+
       <div className="movieRow--listarea">
           <div className="movieRow--list">
             {items.results.length > 0 && items.results.map((item, key) =>(
@@ -13,7 +26,6 @@ export default function MovieRow({title, items}) {
                 <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
               </div>
             ))}
-        
           </div>
 
       </div>

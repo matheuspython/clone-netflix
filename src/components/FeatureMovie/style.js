@@ -38,9 +38,14 @@ export const FeatureMovieStyled = styled.section`
         font-size: 20px;
         color: #999;
         max-width: 40%;
+        height: 40%;
+        overflow: auto;
+        text-overflow: ellipsis;
+
         ${media.lessThan("medium")`
           max-width: 100%;
         `}
+        &::-webkit-scrollbar {width:0}
       }
       .feature--buttons{
         margin-top: 15px;
