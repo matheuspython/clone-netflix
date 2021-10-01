@@ -40,7 +40,7 @@ export const MovieRowStyled = styled.div`
     padding: 30px;
   }
   .movieRow--list{
-    width: 99999px;
+    transition: all.4s;
   }
   .movieRow--item {
     display: inline-block;
