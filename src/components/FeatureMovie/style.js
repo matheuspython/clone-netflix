@@ -5,6 +5,9 @@ export const FeatureMovieStyled = styled.section`
   height: 100vh;
   background-size:cover;
   background-position:center;
+  ${media.lessThan("large")`
+    height: 90vh;
+  `}
   .featured--vertical{
     width: inherit;
     height: inherit;
@@ -20,6 +23,9 @@ export const FeatureMovieStyled = styled.section`
       .featured--name{
         font-size: 60px;
         font-weight: bold;
+        ${media.lessThan("large")`
+          font-size: 16px;
+        `}  
       }
       .featured--info{
           font-size:18px;
@@ -44,6 +50,8 @@ export const FeatureMovieStyled = styled.section`
 
         ${media.lessThan("medium")`
           max-width: 100%;
+          font-size:14px;
+          margin-right:30pz;
         `}
         &::-webkit-scrollbar {width:0}
       }
@@ -62,6 +70,9 @@ export const FeatureMovieStyled = styled.section`
           &:hover{
             opacity: 0.7;
           }
+          ${media.lessThan("medium")`
+            font-size: 16px;
+          `}
         }
         .featured--watchbutton{
           background-color: #fff;
@@ -76,6 +87,9 @@ export const FeatureMovieStyled = styled.section`
         margin-top: 15px;
         font-size: 14px;
         color: #999;
+        ${media.lessThan("medium")`
+          font-size: 14px; 
+        `}
       }
     }
   }

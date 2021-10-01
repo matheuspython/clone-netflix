@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query'
 
 export const MovieRowStyled = styled.div`
   margin-bottom: 30px;
@@ -20,10 +21,12 @@ export const MovieRowStyled = styled.div`
     opacity: 0;
     transition: .4s;
     top: 20%;
+    ${media.lessThan("large")`
+    opacity: 1;
+    `}
   }
   .movieRow-left{
     left: 0;
-  
   }
   .movieRow-right{
     right: 0;
